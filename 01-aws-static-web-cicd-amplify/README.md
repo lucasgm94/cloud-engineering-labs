@@ -17,7 +17,7 @@ This laboratory demonstrates the deployment of a secure, automated static websit
 ### Phase 1: Infrastructure Setup (S3)
 Initial hosting configuration by creating an **S3 Bucket** and enabling **Static Website Hosting**.
 * *Key Action:* Uploading core files (`index.html`, CSS, assets) and defining the index document.
-* **Evidence:** `(./screenshots/01-s3-bucket-configuration(11).png/)`
+* **Evidence:** `(./screenshots/01-s3-bucket-configuration (11).png/)`
 
 ### Phase 2: Identity & Access Management (IAM)
 Implementing security layers through **Bucket Policies** to control public access.
