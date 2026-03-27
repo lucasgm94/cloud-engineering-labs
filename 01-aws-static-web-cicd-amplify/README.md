@@ -38,6 +38,8 @@ Validating that the website is served over a secure connection.
 Properly decommissioning resources to prevent unnecessary costs and maintain environment hygiene.
 * *Key Action:* Emptying the S3 Bucket and deleting the Amplify App after successful testing.
 
+📂 Note: Full step-by-step visual evidence for each phase is available in the /screenshots folder.
+
 ---
 
 ## 🛡️ Cybersecurity & Cloud Insights
