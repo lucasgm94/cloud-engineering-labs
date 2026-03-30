@@ -1,0 +1,79 @@
+# ================================================================= #
+#  LABORATORIO KUBERNETES: KIND + PROMETHEUS + GRAFANA (STRESS)     #
+# ================================================================= #
+
+# --- VERSIÓN EN ESPAÑOL (SPANISH VERSION) ---
+
+# 1. VALIDACIÓN DEL ENTORNO
+# Verificar que Docker y las herramientas estén listas
+docker version
+kind --version
+kubectl version --client
+helm version
+
+# 2. CREACIÓN DE LA INFRAESTRUCTURA
+# Crear el cluster de 3 nodos (1 Control Plane + 2 Workers)
+kind create cluster --name lab-seguridad --config config.yaml
+kubectl get nodes
+
+# 3. INSTALACIÓN DEL MONITOREO (HELM)
+# Agregar repositorio y actualizar
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+# Instalar el stack de monitoreo
+helm install monitoreo prometheus-community/kube-prometheus-stack
+kubectl get pods
+
+# 4. ACCESO Y SEGURIDAD
+# Extraer contraseña de Grafana y abrir túnel (localhost:3000)
+kubectl get secret monitoreo-grafana -o jsonpath="{.data.admin-password}" | ForEach-Object { [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($_)) }
+kubectl port-forward deployment/monitoreo-grafana 3000:3000
+
+# 5. PRUEBAS DE ESTRÉS
+# Desplegar carga y verificar métricas
+kubectl apply -f estres.yaml
+kubectl top pods
+kubectl delete pod stress-test
+
+# 6. LIMPIEZA FINAL
+# Borrar cluster y liberar recursos
+kind delete cluster --name lab-seguridad
+
+# ----------------------------------------------------------------- #
+
+# --- ENGLISH VERSION (VERSIÓN EN INGLÉS) ---
+
+# 1. ENVIRONMENT VALIDATION
+# Check if Docker and tools are ready
+docker version
+kind --version
+kubectl version --client
+helm version
+
+# 2. INFRASTRUCTURE CREATION
+# Create a 3-node cluster (1 Control Plane + 2 Workers)
+kind create cluster --name lab-seguridad --config config.yaml
+kubectl get nodes
+
+# 3. MONITORING INSTALLATION (HELM)
+# Add repository and update
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+# Install the monitoring stack
+helm install monitoreo prometheus-community/kube-prometheus-stack
+kubectl get pods
+
+# 4. ACCESS AND SECURITY
+# Extract Grafana password and open tunnel (localhost:3000)
+kubectl get secret monitoreo-grafana -o jsonpath="{.data.admin-password}" | ForEach-Object { [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($_)) }
+kubectl port-forward deployment/monitoreo-grafana 3000:3000
+
+# 5. STRESS TESTING
+# Deploy load and check metrics
+kubectl apply -f estres.yaml
+kubectl top pods
+kubectl delete pod stress-test
+
+# 6. FINAL CLEANUP
+# Delete cluster and free up resources
+kind delete cluster --name lab-seguridad
