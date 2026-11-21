@@ -1,29 +1,28 @@
 # Cloud Engineering & Infrastructure Labs
 
-This repository is a dedicated space for exploring and implementing cloud-native solutions, infrastructure as code (IaC), and observability. It focuses on building scalable, secure, and automated environments primarily within the AWS ecosystem.
+This repository serves as a dedicated space for exploring, building, and experimenting with cloud-native architectures, infrastructure as code (IaC), automation, and cloud security practices. 
 
----
+## 🎯 Purpose
+The goal of these labs is to bridge the gap between theoretical cloud concepts and hands-on implementation, fostering resilient, scalable, and secure environments. It documents my ongoing journey in mastering modern cloud infrastructure and DevOps practices.
 
 ## 🏗️ Core Focus Areas
-* **Cloud Architecture:** Designing resilient systems using AWS core services.
-* **Containers & Orchestration:** Deploying and managing workloads with Kubernetes (K8s).
-* **Observability:** Implementing monitoring, logging, and tracing to ensure system health.
-* **Security & Automation:** Applying DevSecOps principles and automating infrastructure deployments.
+- **Cloud Architecture & Design:** Building resilient and scalable multi-service environments.
+- **Infrastructure as Code (IaC):** Automating resource provisioning and ensuring consistency.
+- **Security & Guardrails (DevSecOps):** Integrating compliance checks and static code analysis early in the development lifecycle.
+- **Containers & Orchestration:** Managing containerized workloads and operational workflows.
+- **Automation & Scripting:** Streamlining repetitive operational tasks to reduce human error.
 
-## 📂 Repository Structure
-* **/aws-projects**: Architectural patterns and IAM security labs.
-* **/k8s-observability-lab**: Hands-on implementation of monitoring stacks and Kubernetes cluster management.
+## 📚 Structure
+Each lab or project folder includes:
+- **Architecture/Configuration Files:** Code snippets, IaC templates, or configurations used for the exercise.
+- **Documentation & Walkthroughs:** Step-by-step notes detailing the implementation process.
+- **Visual Evidence:** Screenshots and test results validating the execution.
 
-## 🛠️ Tech Stack
-* **Cloud Provider:** AWS (EC2, S3, RDS, Amplify, IAM).
-* **Orchestration:** Kubernetes (K8s).
-* **Monitoring:** Prometheus, Grafana (Observability stack).
-* **Automation:** Shell scripting & Infrastructure as Code.
+## ⚙️ Approach & Scope
+All experiments and configurations are designed within controlled, safe, and isolated environments. The primary focus is on continuous learning, exploring native cloud tools, and adhering to industry best practices.
 
-## 🚀 Key Learning Objectives
-1. Implement high-availability architectures in the cloud.
-2. Master cluster observability and performance tuning.
-3. Automate repetitive infrastructure tasks to reduce human error.
+## 🧾 Disclaimer
+These labs are created solely for educational, training, and professional development purposes. They represent an ongoing portfolio of practical cloud engineering skills.
 
----
-*Maintained by [lucasgm94] | Continuous learning in Cloud & DevOps*
+👋 Author: Lucas G. (lucasgm94)  
+🔗 GitHub Profile
