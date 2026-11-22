@@ -1,4 +1,4 @@
-# 🚀 Lab 01: Secure Static Web Hosting & CI/CD Pipeline
+# Lab 01: Secure Static Web Hosting & CI/CD Pipeline
 
 This laboratory demonstrates the deployment of a secure, automated static website using **Amazon Web Services (AWS)**. The project transitions from a manual S3 storage setup to a fully automated **CI/CD pipeline** with **AWS Amplify**, prioritizing encryption and resource lifecycle management.
 

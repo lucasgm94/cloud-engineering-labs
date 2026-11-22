@@ -1,4 +1,4 @@
-# Lab: AWS Serverless Data Lake & Analytics Pipeline (S3 + Glue)
+# Lab 02: AWS Serverless Data Lake & Analytics Pipeline (S3 + Glue)
 
 ## 🎯 Objective
 Build a foundational serverless data lake architecture on AWS. This lab covers the ingestion of raw analytical datasets into Amazon S3, structuring storage zones (`raw` vs `transformed`), and configuring AWS Glue Crawlers to automatically discover schemas and populate the AWS Glue Data Catalog.
